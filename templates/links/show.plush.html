@@ -1,0 +1,45 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Link Details</h3>
+
+  <div class="float-end">
+    <%= linkTo(linksPath(), {class: "btn btn-info"}) { %>
+      Back to all Links
+    <% } %>
+    <%= linkTo(editLinkPath({ link_id: link.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+    <%= linkTo(linkPath({ link_id: link.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+  </div>
+</div>
+
+
+
+<ul class="list-group mb-2 ">
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">Destination</label>
+    <p class="d-inline-block"><%= link.Destination %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">Key</label>
+    <p class="d-inline-block"><%= link.Key %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">DomainID</label>
+    <p class="d-inline-block"><%= link.DomainID %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">QrCode</label>
+    <p class="d-inline-block"><%= link.QrCode %></p>
+  </li>
+
+
+</ul>

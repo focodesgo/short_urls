@@ -1,0 +1,33 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Links</h3>
+  <div class="float-end">
+    <%= linkTo(newLinksPath(), {class: "btn btn-primary"}) { %>
+      Create New Link
+    <% } %>
+  </div>
+</div>
+
+<table class="table table-hover table-bordered">
+  <thead class="thead-light">
+    <th>Destination</th><th>Key</th><th>DomainID</th><th>QrCode</th>
+    <th>&nbsp;</th>
+  </thead>
+  <tbody>
+    <%= for (link) in links { %>
+      <tr>
+        <td class="align-middle"><%= link.Destination %></td><td class="align-middle"><%= link.Key %></td><td class="align-middle"><%= link.DomainID %></td><td class="align-middle"><%= link.QrCode %></td>
+        <td>
+          <div class="float-end">
+            <%= linkTo(linkPath({ link_id: link.ID }), {class: "btn btn-info", body: "View"}) %>
+            <%= linkTo(editLinkPath({ link_id: link.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+            <%= linkTo(linkPath({ link_id: link.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+          </div>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<div class="text-center">
+  <%= paginator(pagination) %>
+</div>

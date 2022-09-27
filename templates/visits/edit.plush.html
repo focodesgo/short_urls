@@ -1,0 +1,8 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Edit Visit</h3>
+</div>
+
+<%= formFor(visit, {action: visitPath({ visit_id: visit.ID }), method: "PUT"}) { %>
+  <%= partial("visits/form.html") %>
+  <%= linkTo(visitPath({ visit_id: visit.ID }), {class: "btn btn-warning", "data-confirm": "Are you sure?", body: "Cancel"}) %>
+<% } %>

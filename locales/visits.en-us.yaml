@@ -1,0 +1,6 @@
+- id: "visit.created.success"
+  translation: "Visit was successfully created."
+- id: "visit.updated.success"
+  translation: "Visit was successfully updated."
+- id: "visit.destroyed.success"
+  translation: "Visit was successfully destroyed."

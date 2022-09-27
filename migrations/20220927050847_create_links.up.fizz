@@ -1,0 +1,8 @@
+create_table("links") {
+	t.Column("id", "uuid", {primary: true})
+	t.Column("destination", "string", {})
+	t.Column("key", "string", {})
+	t.Column("domain_id", "uuid", {})
+	t.Column("qr_code", "string", {})
+	t.Timestamps()
+}

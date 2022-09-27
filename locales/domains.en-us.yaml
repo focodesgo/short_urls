@@ -1,0 +1,6 @@
+- id: "domain.created.success"
+  translation: "Domain was successfully created."
+- id: "domain.updated.success"
+  translation: "Domain was successfully updated."
+- id: "domain.destroyed.success"
+  translation: "Domain was successfully destroyed."

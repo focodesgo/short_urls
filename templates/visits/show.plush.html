@@ -1,0 +1,31 @@
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Visit Details</h3>
+
+  <div class="float-end">
+    <%= linkTo(visitsPath(), {class: "btn btn-info"}) { %>
+      Back to all Visits
+    <% } %>
+    <%= linkTo(editVisitPath({ visit_id: visit.ID }), {class: "btn btn-warning", body: "Edit"}) %>
+    <%= linkTo(visitPath({ visit_id: visit.ID }), {class: "btn btn-danger", "data-method": "DELETE", "data-confirm": "Are you sure?", body: "Destroy"}) %>
+  </div>
+</div>
+
+
+
+<ul class="list-group mb-2 ">
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">LinkID</label>
+    <p class="d-inline-block"><%= visit.LinkID %></p>
+  </li>
+
+
+
+  <li class="list-group-item pb-1">
+    <label class="small d-block">UserMeta</label>
+    <p class="d-inline-block"><%= visit.UserMeta %></p>
+  </li>
+
+
+</ul>

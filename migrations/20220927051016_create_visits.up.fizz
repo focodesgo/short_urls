@@ -1,0 +1,6 @@
+create_table("visits") {
+	t.Column("id", "uuid", {primary: true})
+	t.Column("link_id", "uuid", {})
+	t.Column("user_meta", "string", {})
+	t.Timestamps()
+}
